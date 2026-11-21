@@ -1,0 +1,5 @@
+K,checkpoint,test_mse,explained_variance,mean_l0,dead_fraction,ce_base_sae_test,ce_sae_recon_sae_test,delta_ce_sae_test,delta_ce_retain
+32,not recorded,0.01231,0.9603,32.0,0.25,3.9341,7.401,3.4668,3.6119
+48,not recorded,0.0362,0.8834,48.0,0.238,3.9341,5.3959,1.4618,1.7646
+56,sae_epoch_025,0.00704,0.9773,56.0,0.315,3.9341,5.0999,1.1657,1.4473
+64,sae_epoch_025,0.2859,0.0789,64.0,0.202,3.9341,4.7404,0.8063,1.0098

@@ -1,0 +1,43 @@
+{
+  "seed": 42,
+  "device": "cuda",
+  "d_in": 4096,
+  "d_sae": 16384,
+  "exp_factor": 4,
+  "k": 48,
+  "hook_layer": 12,
+  "num_epochs": 20,
+  "lr": 0.0001,
+  "weight_decay": 0.0,
+  "grad_clip_norm": 1.0,
+  "train_batch_tokens": 8192,
+  "eval_batch_tokens": 8192,
+  "validate_every_steps": 500,
+  "checkpoint_every_steps": 1000,
+  "sae_dtype": "torch.bfloat16",
+  "optimizer": "AdamW",
+  "activation_data_dir": "/content/drive/MyDrive/Diploma/activation_datasets2",
+  "activation_summary": {
+    "train": {
+      "n_shards": 181,
+      "n_tokens": -1
+    },
+    "val": {
+      "n_shards": 23,
+      "n_tokens": -1
+    },
+    "test": {
+      "n_shards": 23,
+      "n_tokens": -1
+    }
+  },
+  "sae_out_dir": "/content/drive/MyDrive/Diploma/sae_training_exp4_aux_resample_new_dataset_k48fine_tune",
+  "aux_loss_coeff": 0.03125,
+  "dead_threshold": 1600,
+  "resample_enabled": true,
+  "resample_every_epochs": 3,
+  "resample_max_features": 2048,
+  "resample_candidate_batches": 32,
+  "resample_top_tokens_per_batch": 256,
+  "reset_optimizer_state_after_resample": true
+}

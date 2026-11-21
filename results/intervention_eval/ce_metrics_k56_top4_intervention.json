@@ -1,0 +1,20 @@
+{
+  "retain": {
+    "jsonl_path": "/content/drive/MyDrive/Diploma/corpora2/retain.jsonl",
+    "n_examples": 128,
+    "ce_base": 3.9752281084656715,
+    "ce_sae_recon": 5.422525718808174,
+    "ce_sae_intervention": 3.9752757251262665,
+    "delta_ce_recon": 1.4472976103425026,
+    "delta_ce_intervention": 4.7616660594940186e-05
+  },
+  "sae_test": {
+    "jsonl_path": "/content/drive/MyDrive/Diploma/corpora2/sae_test.jsonl",
+    "n_examples": 128,
+    "ce_base": 3.9341451972723007,
+    "ce_sae_recon": 5.099866762757301,
+    "ce_sae_intervention": 3.9332310184836388,
+    "delta_ce_recon": 1.1657215654850006,
+    "delta_ce_intervention": -0.0009141787886619568
+  }
+}

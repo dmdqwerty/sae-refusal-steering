@@ -1,0 +1,247 @@
+{
+  "seed": 42,
+  "model_name_or_path": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "system_prompt": "You are a helpful assistant.",
+  "prompt_only": true,
+  "max_tokens_per_example": 1024,
+  "sae_total_token_target": 15000000,
+  "sae_ratios": {
+    "harmless_instruction": 0.98,
+    "benign_safety_related": 0.01,
+    "harmful_refusal_inducing": 0.01
+  },
+  "sae_split_ratios": {
+    "train": 0.8,
+    "val": 0.1,
+    "test": 0.1
+  },
+  "retain_token_target": 50000,
+  "target_token_target": 10000,
+  "use_beavertails_for_sae_train_only": true,
+  "files": {
+    "sae_all": "sae_all.jsonl",
+    "sae_train": "sae_train.jsonl",
+    "sae_val": "sae_val.jsonl",
+    "sae_test": "sae_test.jsonl",
+    "retain": "retain.jsonl",
+    "target": "target.jsonl"
+  },
+  "summaries": {
+    "sae_all": {
+      "n_examples": 122538,
+      "n_tokens": 14892764,
+      "by_category": {
+        "harmless_instruction": {
+          "n_examples": 117457,
+          "n_tokens": 14700038
+        },
+        "harmful_refusal_inducing": {
+          "n_examples": 3218,
+          "n_tokens": 118113
+        },
+        "benign_safety_related": {
+          "n_examples": 1863,
+          "n_tokens": 74613
+        }
+      },
+      "by_source": {
+        "HuggingFaceH4/ultrachat_200k": {
+          "n_examples": 70044,
+          "n_tokens": 12158859
+        },
+        "yahma/alpaca-cleaned": {
+          "n_examples": 36954,
+          "n_tokens": 1475850
+        },
+        "databricks/databricks-dolly-15k": {
+          "n_examples": 10459,
+          "n_tokens": 1065329
+        },
+        "PKU-Alignment/BeaverTails-strict-train-only": {
+          "n_examples": 2995,
+          "n_tokens": 110534
+        },
+        "generated_diverse_safe_prompts": {
+          "n_examples": 1863,
+          "n_tokens": 74613
+        },
+        "walledai/AdvBench-train-remainder": {
+          "n_examples": 223,
+          "n_tokens": 7579
+        }
+      }
+    },
+    "sae_train": {
+      "n_examples": 98029,
+      "n_tokens": 11916629,
+      "by_category": {
+        "harmless_instruction": {
+          "n_examples": 93965,
+          "n_tokens": 11762465
+        },
+        "harmful_refusal_inducing": {
+          "n_examples": 2574,
+          "n_tokens": 94508
+        },
+        "benign_safety_related": {
+          "n_examples": 1490,
+          "n_tokens": 59656
+        }
+      },
+      "by_source": {
+        "HuggingFaceH4/ultrachat_200k": {
+          "n_examples": 55978,
+          "n_tokens": 9731942
+        },
+        "yahma/alpaca-cleaned": {
+          "n_examples": 29595,
+          "n_tokens": 1181144
+        },
+        "databricks/databricks-dolly-15k": {
+          "n_examples": 8392,
+          "n_tokens": 849379
+        },
+        "walledai/AdvBench-train-remainder": {
+          "n_examples": 175,
+          "n_tokens": 5959
+        },
+        "PKU-Alignment/BeaverTails-strict-train-only": {
+          "n_examples": 2399,
+          "n_tokens": 88549
+        },
+        "generated_diverse_safe_prompts": {
+          "n_examples": 1490,
+          "n_tokens": 59656
+        }
+      }
+    },
+    "sae_val": {
+      "n_examples": 12252,
+      "n_tokens": 1483031,
+      "by_category": {
+        "harmless_instruction": {
+          "n_examples": 11745,
+          "n_tokens": 1463687
+        },
+        "benign_safety_related": {
+          "n_examples": 186,
+          "n_tokens": 7458
+        },
+        "harmful_refusal_inducing": {
+          "n_examples": 321,
+          "n_tokens": 11886
+        }
+      },
+      "by_source": {
+        "yahma/alpaca-cleaned": {
+          "n_examples": 3729,
+          "n_tokens": 149900
+        },
+        "databricks/databricks-dolly-15k": {
+          "n_examples": 999,
+          "n_tokens": 102053
+        },
+        "HuggingFaceH4/ultrachat_200k": {
+          "n_examples": 7017,
+          "n_tokens": 1211734
+        },
+        "generated_diverse_safe_prompts": {
+          "n_examples": 186,
+          "n_tokens": 7458
+        },
+        "PKU-Alignment/BeaverTails-strict-train-only": {
+          "n_examples": 297,
+          "n_tokens": 11056
+        },
+        "walledai/AdvBench-train-remainder": {
+          "n_examples": 24,
+          "n_tokens": 830
+        }
+      }
+    },
+    "sae_test": {
+      "n_examples": 12257,
+      "n_tokens": 1493104,
+      "by_category": {
+        "harmless_instruction": {
+          "n_examples": 11747,
+          "n_tokens": 1473886
+        },
+        "harmful_refusal_inducing": {
+          "n_examples": 323,
+          "n_tokens": 11719
+        },
+        "benign_safety_related": {
+          "n_examples": 187,
+          "n_tokens": 7499
+        }
+      },
+      "by_source": {
+        "HuggingFaceH4/ultrachat_200k": {
+          "n_examples": 7049,
+          "n_tokens": 1215183
+        },
+        "yahma/alpaca-cleaned": {
+          "n_examples": 3630,
+          "n_tokens": 144806
+        },
+        "databricks/databricks-dolly-15k": {
+          "n_examples": 1068,
+          "n_tokens": 113897
+        },
+        "walledai/AdvBench-train-remainder": {
+          "n_examples": 24,
+          "n_tokens": 790
+        },
+        "PKU-Alignment/BeaverTails-strict-train-only": {
+          "n_examples": 299,
+          "n_tokens": 10929
+        },
+        "generated_diverse_safe_prompts": {
+          "n_examples": 187,
+          "n_tokens": 7499
+        }
+      }
+    },
+    "retain": {
+      "n_examples": 403,
+      "n_tokens": 50148,
+      "by_category": {
+        "retain_harmless_instruction": {
+          "n_examples": 403,
+          "n_tokens": 50148
+        }
+      },
+      "by_source": {
+        "databricks/databricks-dolly-15k": {
+          "n_examples": 48,
+          "n_tokens": 3806
+        },
+        "HuggingFaceH4/ultrachat_200k": {
+          "n_examples": 226,
+          "n_tokens": 40901
+        },
+        "yahma/alpaca-cleaned": {
+          "n_examples": 129,
+          "n_tokens": 5441
+        }
+      }
+    },
+    "target": {
+      "n_examples": 297,
+      "n_tokens": 10009,
+      "by_category": {
+        "target_harmful_refusal_inducing": {
+          "n_examples": 297,
+          "n_tokens": 10009
+        }
+      },
+      "by_source": {
+        "walledai/AdvBench-target-only": {
+          "n_examples": 297,
+          "n_tokens": 10009
+        }
+      }
+    }
+  }
+}

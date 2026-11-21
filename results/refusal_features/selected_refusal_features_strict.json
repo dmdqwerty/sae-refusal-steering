@@ -1,0 +1,16 @@
+{
+  "selected_features": [
+    6731,
+    2919,
+    12557,
+    10327
+  ],
+  "top_n": 4,
+  "ranking_csv": "/content/drive/MyDrive/Diploma/sae_eval_k56_refusal_features/refusal_features_strict_retain005/refusal_feature_ranking_strict.csv",
+  "policy": {
+    "max_retain_rate": 0.05,
+    "min_target_count": 10,
+    "min_target_rate_mode": "mean",
+    "min_target_rate_multiplier": 1.0
+  }
+}
